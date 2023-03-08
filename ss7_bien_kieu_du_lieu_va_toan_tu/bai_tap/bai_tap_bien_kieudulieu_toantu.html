@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập SS7</title>
+</head>
+<body>
+</body>
+<script>
+    // Nhập và tính tổng và điểm trung bình
+    var diemVatly = prompt("Mời nhập điểm Vật lý");
+    var diemHoahoc = prompt("Mời nhập điểm Hoá học");
+    var diemSinhhoc = prompt("Mời nhập điểm Sinh học");
+    var tong = (parseInt(diemVatly) + parseInt(diemSinhhoc) + parseInt(diemHoahoc));
+    document.write("Điểm Vật lý : "+diemVatly +"<br>");
+    document.write("Điểm Hoá hoc: "+diemHoahoc + "<br>");
+    document.write("Điểm Sinh học: "+diemSinhhoc + "<br>");
+    document.write("Tổng :" + tong + "<br>");
+    document.write("Điểm trung bình: "+ (tong/3));
+
+
+     // Chuyển đổi độ C sang độ F
+    let doC = prompt("Mời nhập độ C");
+    let doF = (9/5*(parseInt(doC)))+32;
+    document.write("Độ F: "+ doF);
+
+    //  Diện tích hình tròn
+    let r = 10;
+    document.write("Diện tích hình tròn: " + r*r*Math.PI);
+    // Chu vi hình tròn
+    document.write("Chu vi hình tròn: "+ (R*2)*Math.PI);
+</script>
+</html>

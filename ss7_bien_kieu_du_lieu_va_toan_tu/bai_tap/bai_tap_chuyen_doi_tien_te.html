@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập SS7</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From Currency</th>
+        <th>To Currency</th>
+    </tr>
+    <tr>
+        <td ><input id="num" type="text"></td>
+        <td><select id="select1">
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
+        </select></td>
+        <td><select id="select2">
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
+        </select>
+        </td>
+        <td><button type="button" style="background: plum" onclick="clickme()"><span style="color:white;">Convert</span> </button></td>
+    </tr>
+</table>
+<br>
+<p id = "print"></p>
+<script>
+
+    function clickme() {
+        let price = document.getElementById("num").value;
+        let from = document.getElementById("select1").value;
+        let to = document.getElementById("select2").value;
+        let result;
+        if(from == "VND" && to == "USD"){
+            result =  price / 23000;
+            document.getElementById("print").innerText = "Result: "+result +"$";
+        }else if(from == "USD" && to == "VND"){
+            result = price * 23000;
+            document.getElementById("print").innerText ="Result: "+result+ "Đ";
+        }else if(from == "VND" && to == "VND"){
+            document.getElementById("print").innerText ="Result: "+price+"VND";
+        }else{
+            document.getElementById("print").innerText ="Result: "+price+"$";
+        }
+    }
+
+
+
+    
+</script>
+</body>
+</html>
