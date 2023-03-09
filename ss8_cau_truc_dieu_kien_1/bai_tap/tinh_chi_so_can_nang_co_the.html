@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let weight = prompt("Input your weight")*1;
+    // Nhập chiều cao là theo mét : 1.75, 1.70;
+    let height = prompt("Input your height")*1;
+    let bmi = weight / (Math.pow(height,2));
+    if(parseFloat(bmi) >= 30){
+        alert("Obese");
+    }else if(parseFloat(bmi)>=25.0){
+        alert("Overweight");
+    }else if(parseFloat(bmi) >= 18.5){
+        alert("Normal");
+    }else{
+        alert("Underweight");
+    }
+</script>
+</html>
