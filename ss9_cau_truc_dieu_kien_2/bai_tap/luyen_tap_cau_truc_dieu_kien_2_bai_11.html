@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let thuNhap = prompt("Nhập số tiền thu nhập hàng tháng: ")*1;
+    var tienThue;
+    //Thu nhập dưới 5tr: thuế = Thu nhập * 5%;
+    //Thu nhập từ 5- 10tr : thuế = thu nhập * 10% -250k;
+    //Thu nhập 10tr  trở lên : thuế = thu nhập * 15% - 750k;
+    if(thuNhap > (10e+6)){
+        tienThue = ((thuNhap*15)/100)- (75e+4);
+        alert("Tiền thuế cần phải nộp: "+tienThue);
+    }else if(thuNhap > (5e+6) && thuNhap < (10e+6)){
+        tienThue = ((thuNhap*10)/100) - (25e+4);
+        alert("Tiền thuế cần phải nộp: "+ tienThue);
+    }else{
+        tienThue = (thuNhap * 5) / 100;
+        alert("Tiền thuế cần phải nộp : "+ tienThue);
+    }
+</script>
+</body>
+</html>

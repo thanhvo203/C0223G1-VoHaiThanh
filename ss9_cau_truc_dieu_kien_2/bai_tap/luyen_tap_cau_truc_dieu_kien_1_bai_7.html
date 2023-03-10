@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cước điện thoại</title>
+</head>
+<body>
+<script>
+    let time = prompt("Input total time to call: ")*1;
+    let costBegin = 10000;
+    var pay = 0 ;
+    // Phí bắt đầu cuộc gọi : 10.000;
+    // Phí từ 0 đến 10p: 100  mỗi phút;
+    // Phí sau 10p gọi : 300 mỗi phút;
+    // Phí sau 30p gọi : 500 mỗi phút;
+    if(time > 30){
+        pay = costBegin + (10*100) +(20*300) + ((time-30)*500);
+        alert("Total money you must pay for call above 30 minutes: "+ pay);
+    }else if(time > 10){
+        pay = costBegin + (10*100) + ((time-10)*300);
+        alert("Total money you must pay for call above 10 minutes: "+ pay);
+    }else{
+        pay = costBegin + (time * 100);
+        alert("Total money you must pay for call below 10 minutes: "+ pay);
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--A = P x (1 + r)^n-->
+<!--A = FV (Future Value – giá trị trong tương lai) là số tiền bạn nhận được trong tương lai.-->
+<!--P = PV (Present Value – giá trị trong hiện tại) là số tiền gốc bạn đầu tư ban đầu.-->
+<!--r là lãi suất hằng năm.-->
+<!--n là số chu kỳ của lãi kép.-->
+
+<script>
+    let tienLai;
+    let tienGoc = prompt("Nhập tiền gốc: ")*1;
+    let chuKy = prompt("Nhập chu kỳ(tháng): ")*1;
+    if(chuKy > 12){ // Lãi suất 15%;
+        let laiSuat = 15/100;
+        tienLai = tienGoc * (Math.pow(1+laiSuat,chuKy));
+        alert(tienLai);
+    }else if(chuKy > 6){ // Lãi suất 10%
+         let laiSuat = 10/100;
+        tienLai = tienGoc * (Math.pow(1+laiSuat,chuKy));
+        alert(tienLai);
+    }else{ //Lãi suât 5%
+        let laiSuat = 5/100;
+        tienLai = tienGoc * (Math.pow(1+laiSuat,chuKy));
+        alert(tienLai);
+    }
+</script>
+
+</body>
+</html>

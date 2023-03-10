@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập kWh điện: ")*1;
+    var pay;
+    // 0 - 50 kWh: 1,678đ;
+    //51 -100 kWh: 1,734đ;
+    // trên 100 kWh : 2,014đ;
+
+    if(a > 101){
+        pay = (50 * 1678) + (50 * 1734) + ((a - 100)* 2014);
+        alert("Tiền điện phải trả trên 100kWh: "+ pay);
+    }else if(a > 50){
+        pay = (50 * 1678) + ((a-50)*1734);
+        alert("Tiền điện phải trả từ 50 đến 100 kWh: "+pay);
+    }else{
+        pay = a * 1678;
+        alert("Tiền điện phải trả dưới 50 kWh: "+ pay);
+    }
+
+</script>
+
+</body>
+</html>
