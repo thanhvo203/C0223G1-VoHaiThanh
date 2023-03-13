@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = prompt("Input number: ")*1;
+    let num1 = 1;
+    let num2 = 1;
+    let num = 0;
+    for( let i = 0 ; i < number; i++){
+        num = num1+ num2;
+        num1 = num2;
+        num2 = num;
+        document.write("Fibonacci : " + num + "<br>")
+        if(num % 5 ==0 ){
+            document.write("Fibonacci divisible by  5 : " + num + "<br>");
+        }
+    }
+</script>
+
+</body>
+</html>

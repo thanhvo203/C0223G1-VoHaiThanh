@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = prompt("Input number: ");
+    let num;
+    let num1 = 1;
+    let num2 = 1;
+    let total = 0;
+    for(let i = 0 ; i <= number ; i++ ){
+        num = num1 + num2;
+        num1 = num2;
+        num2 = num;
+        total += num;
+        document.write("Fibonacci at "+ i +" = "+ num +"<br>")
+
+
+    }document.write("Total of 20 number Fibonacci =  " + total);
+</script>
+
+</body>
+</html>

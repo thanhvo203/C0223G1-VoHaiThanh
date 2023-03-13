@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = prompt("Input number: ") * 1;
+    let count = 0;
+    let i = 2;
+    while (count < number) {
+        let snt = true;
+        for (let j = 2; j <= Math.sqrt(i); j++){
+            if( i % j ===0){
+                snt = false;
+                break;
+            }
+        }
+        if(snt){
+            count++;
+            document.write(i + "<br>");
+        }
+        i++;
+    }
+
+</script>
+
+</body>
+</html>

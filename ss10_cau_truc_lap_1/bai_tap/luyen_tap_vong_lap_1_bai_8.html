@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" value="Play" onclick="game()">Play</button>
+</body>
+<script>
+    function game() {
+        let limit = prompt("Input the limit: ") * 1;
+        let randomNumber = Math.floor(Math.random() * limit);
+        let number = prompt("Input the number you wanna choose: ") * 1;
+        if (number == randomNumber) {
+            document.write("Congratulation!!");
+        } else {
+            let count = 1;
+            while (count <= 3) {
+                if (number < randomNumber) {
+                    alert("Your number lower than ramdon number. Please input again.");
+                    let number2 = prompt("Input the number you wanna choose: ") * 1;
+                    count++;
+                } else {
+                    alert("Your number bigger than ramdon number. Please input again.");
+                    let number1 = prompt("Input the number you wanna choose: ") * 1;
+                    count++;
+                }
+            }
+        }document.write("You're out of turn");
+    }
+</script>
+</html>

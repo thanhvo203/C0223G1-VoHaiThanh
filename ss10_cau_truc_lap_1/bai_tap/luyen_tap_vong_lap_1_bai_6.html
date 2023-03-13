@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let sum = 0;
+    let number = 30;
+    let count = 0;
+    for (let i = 1; i <= 300; i++) {
+        while (count < number) {
+            if (i % 7 == 0) {
+                sum += i;
+                document.write("Number divisivle by 7 = " + i + "<br>");
+                count++;
+
+            }
+            break;
+        }
+    }
+    document.write("Sum of number divisilble by 7 = " + sum);
+
+</script>
+
+</body>
+</html>
