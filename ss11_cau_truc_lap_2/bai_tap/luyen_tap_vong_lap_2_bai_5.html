@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //tiền lãi + gốc nhận được = gốc + ( gốc * lãi suất mỗi tháng)
+    // lãi suất mỗi tháng là  0.3;
+    let money = 1000;
+    let cycle = prompt("Input the cycle: ")*1;
+    let interest = 0.3/100;
+    for(let i = 1; i <= cycle ; i++){
+        money = money + (money * interest);
+    }
+    document.write("Sum = " + money);
+</script>
+</body>
+</html>

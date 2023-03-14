@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = prompt("Input the number: ")*1;
+    let num = 0;
+    let num1 = 1;
+    let num2 = 1;
+    document.write(num1 + "<br>");
+    document.write(num2 + "<br>");
+    for(let i = 0; i <= number ; i++){
+        num = num1+num2;
+        num1 = num2;
+        num2 = num;
+        document.write(num + "<br>");
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = prompt("Input the number: ") * 1;
+    for (let i = 1; i <= number; i++) {
+        for (let j = 1; j <= i; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+    for (let i = number; i >= 1; i--) {
+        for (let j = 1; j <= i; j++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+    for (let i = 1; i <= number; i++) {
+        for (let j = 1; j <= number; j++) {
+            if (j <= (number - i)) {
+                document.write("&nbsp&nbsp");
+            } else {
+                document.write("*");
+            }
+        }
+        document.write("<br>");
+    }
+    document.write("<br>");
+    for( let i = number ; i >= 1 ; i--){
+        for(let j = 1; j <= number; j++ ){
+            if( j <= number-i){
+                document.write("&nbsp&nbsp");
+            }else{
+                document.write("*");
+            }
+        }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>
