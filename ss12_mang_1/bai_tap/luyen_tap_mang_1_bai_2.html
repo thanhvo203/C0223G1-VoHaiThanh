@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [0,5,7,4,1,10,3,6,11,2];
+    let b = a[0];
+    let c;
+    for(let i = 0; i < a.length ; i++){
+        if( b < a[i]){
+            b = a[i];
+            c = i;
+        }
+    }
+    document.write("The position of largest number is: " + c + "<br>");
+    document.write("Thu largest number is : " + b );
+</script>
+
+</body>
+</html>

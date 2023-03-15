@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = prompt();
+    let array = [];
+    for (let i = 0; i < num.length; i++) {
+        array.push(num[i]);
+    }
+    document.write("The array has been sorted down." + array + "<br>");
+    for( let i = 0 ; i < array.length ; i++){
+        for( let j = 0 ; j < array.length ; j++){
+            if(array[j+1] > array[j]){
+                let temp = array[j];
+                array[j] = array[j+1];
+                array[j+1] = temp;
+            }
+        }
+        document.write("The array has been sorted down." + array + "<br>");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p>Text</p>
+    <input type="text" id="dictionary">
+    <button type="button" onclick="search()">Search</button>
+    <p id = "result1"></p>
+</form>
+</body>
+<script>
+    function search(){
+        let input = document.getElementById("dictionary").value;
+        let english = ["banana", "apple" , "gun" , "book", "bullet" , "car"];
+        let vietnam = ["chuối", "táo", "súng", "sách", "đạn", "xe"];
+        let blank =0;
+        let result = "";
+        for( let i = 0; i <= english.length; i++){
+            if(input == english[i]){
+                blank = i;
+            }
+            for (let j = 0; j<= vietnam.length ; j++){
+                if(blank == j){
+                    result = vietnam[j];
+                }else{
+                    document.getElementById("Not Founded!!");
+                }
+            }
+        }
+        document.getElementById("result1").innerText = result;
+
+    }
+</script>
+</html>

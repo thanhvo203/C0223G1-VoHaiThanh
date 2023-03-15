@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num1 = prompt();
+    let num2 = prompt();
+    let array1 = [];
+    let array2 = [];
+    for (let i = 0; i <= num1.length; i++) {
+        array1.push(num1[i]);
+    }
+    document.write(array1 + "<br>");
+    for (let i = 0; i <= num2.length; i++) {
+        array2.push(num2[i]);
+    }
+    document.write(array2 + "<br>");
+    let array3 = array1 + array2;
+    // let array3 = [].concat(array1,array2);
+    // let array3 = [...array1,...array2];
+    document.write(array3);
+</script>
+
+</body>
+</html>

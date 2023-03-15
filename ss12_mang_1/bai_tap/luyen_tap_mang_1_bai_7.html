@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num1 = prompt();
+    let array = [];
+    let V = prompt();
+    let b = 0;
+    for (let i = 0; i <= num1.length; i++) {
+        array.push(num1[i]);
+    }
+    document.write("Array before remove: "+ array + "<br>");
+    for (let i = 0; i < array.length - 1; i++) {
+        if (V == array[i]) {
+            array[i] = array[i + 1];
+        }
+        array[i + 1] = array[i + 2];
+        array[array.length-1] = 0;
+    }
+    array.splice(array.length-1,1);
+    document.write("Array after remove one element: "+ array);
+</script>
+
+</body>
+</html>

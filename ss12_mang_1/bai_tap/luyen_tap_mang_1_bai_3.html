@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [2, 5, 6, 3, 5, 2, 0, 3, 10, 5];
+    let max = a[0];
+    let sum = 0;
+    let count = 0;
+    for (let i = 0; i < a.length; i++) {
+        sum += a[i];
+        count += 1;
+        if (max < a[i]) {
+            max = a[i];
+        }
+    }
+    document.write("The largest number is : " + max + "<br>");
+    document.write(" The medium score of a is: " + sum / count);
+</script>
+</body>
+</html>

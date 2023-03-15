@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Bài 1
+    // let myColor = ["Red","Green","White","Black"];
+    // myColor.toString();
+    // document.write(myColor);
+    // //Bài 2
+    // let num = prompt().toString();
+    // let result = [num[0]];
+    // for(let i = 1 ; i < num.length ; i++){
+    //     if( num[i] % 2 == 0 && num[i-1] % 2 == 0){
+    //         result.push('-', num[i]);
+    //     }else{
+    //         result.push(num[i]);
+    //     }
+    // }
+    // document.write(result.join(''));
+    //Bài 3;
+    let str = prompt();
+    let n = [];
+    for (let i = 0; i < str.length; i++) {
+        if (str.charCodeAt(i) >= 65 && str.charCodeAt(i) <= 90) {
+            n.push(str[i].toLowerCase());
+        } else if (str.charCodeAt(i) >= 97 && str.charCodeAt(i) <= 122) {
+            n.push(str[i].toUpperCase());
+        } else {
+        }
+    }
+    document.write(n.join(''));
+</script>
+
+</body>
+</html>
