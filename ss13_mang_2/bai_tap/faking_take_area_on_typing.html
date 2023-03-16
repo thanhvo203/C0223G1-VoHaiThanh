@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Type anything slowly</h1>
+<textarea onkeydown="check()" rows="3" cols="10" id="input"></textarea>
+</body>
+<script>
+    let a = [];
+    a[1] = 'I';
+    a[2] = ' ';
+    a[3] = 'A';
+    a[4] = 'M';
+    a[5] = ' ';
+    a[6] = 'A';
+    a[7] = ' ';
+    a[8] = 'B';
+    a[9] = 'O';
+    a[10] = 'Y';
+    let str = "";
+
+    function check() {
+        let text = document.getElementById("input").value;
+        for (let i = 1; i <= text.length; i++) {
+            str += a[i];
+            if (i === a.length) {
+                document.getElementById("input").value = "";
+                 str = "";
+
+            }
+        }
+        document.getElementById("input").value = str;
+        str = "";
+    }
+</script>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = prompt();
+    document.write("Size of Array: " + arr1.length + "<br>");
+    let count = 0;
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1.charCodeAt(i) >= 65 && arr1.charCodeAt(i) <= 90
+            || arr1.charCodeAt(i) >= 97 && arr1.charCodeAt(i) <= 122) {
+            count += 1;
+        }
+    }
+    document.write("The number of characters appearing in the array: " + count);
+</script>
+</body>
+</html>

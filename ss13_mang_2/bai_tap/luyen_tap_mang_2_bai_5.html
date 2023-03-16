@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = prompt();
+    let arr2 = prompt();
+    document.write("First String: " + arr1 + "<br>");
+    document.write("Second String: " + arr2 + "<br>");
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = i; j < arr2.length; j++) {
+            if (arr1 === arr2) {
+                document.write("Both string similar!" + "<br>");
+                break;
+            } else {
+                document.write("Both string is different" + "<br>");
+                break;
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
