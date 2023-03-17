@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let r = prompt("Input the radius: ")*1;
+    let d = prompt("Input the diameter: ")*1;
+    function calculatorAreaCircle(number){
+        let area = Math.PI * r*r;
+        return area;
+    }
+    function calculatorCircumferenceCircle(number){
+        let circumference = Math.PI * 2*d;
+        return circumference;
+    }
+    document.write("Area of circle: "+ calculatorAreaCircle(r) + "<br>");
+    document.write("Circumference of circle: "+ calculatorCircumferenceCircle(d));
+</script>
+
+</body>
+</html>

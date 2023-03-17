@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let star = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"];
+    let constellation = ["Ursa Minor","Tarurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"];
+    function checkString(string){
+        let temp = "";
+        let index = 0;
+        for(let i = 0; i < star.length ; i++){
+            if(string == star[i]){
+                index = i;
+                for( let j = 0 ; j < constellation.length ; j++){
+                    if( index == j){
+                       temp = constellation[j];
+                       return temp;
+                    }else{
+                        temp = "Not found the constellation.";
+                        return temp;
+                    }
+                }
+            }
+        }
+    }
+    let string = prompt();
+    let result = checkString(string);
+    alert(result);
+
+</script>
+
+</body>
+</html>
