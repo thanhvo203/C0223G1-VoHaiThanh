@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="add" placeholder="Enter new product">
+<button type="button" onclick="addProduct()">Add</button>
+<p id="output"></p>
+<script>
+    let productString = ["Samsung", "IPhone", "Xiaomi", "OPPO"];
+    function creatProduct() {
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>Number</th>\n' +
+            '        <th>Name</th>\n' +
+            '        <th>Edit</th>\n' +
+            '        <th>Delete</th>\n' +
+            '    </tr>'
+        for (let i = 0; i < productString.length; i++) {
+            tableString += '<tr>\n' +
+                '        <td>' + (i+1) + '</td>\n' +
+                '        <td>' + productString[i] + '</td>\n' +
+                '        <td><button type="button" onclick="editProduct('+i+')" >Edit</button></td>\n' +
+                '        <td><button type="button" onclick="deleteProduct('+i+')">Delete</td>\n' +
+                '    </tr>'
+        }
+        tableString += '</table>'
+        document.getElementById("output").innerHTML = tableString;
+    }
+    creatProduct();
+    function addProduct() {
+        let index = document.getElementById("add").value;
+        productString.push(index);
+        document.getElementById("add").value = "";
+        creatProduct();
+    }
+    function deleteProduct(i){
+        let check = confirm("Do you wanna delete this product:")
+        if(check){
+            productString.splice(i,1);
+        }
+        creatProduct();
+    }
+    function editProduct(i){
+        let name = prompt("Enter again the name you wanna change.");
+        productString[i] = name;
+        creatProduct();
+    }
+</script>
+</body>
+</html>

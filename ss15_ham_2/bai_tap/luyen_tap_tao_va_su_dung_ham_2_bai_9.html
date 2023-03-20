@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function checkCharacter(array, char) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (char == array[i]) {
+                count += 1;
+            }
+        }
+        if (count == 0) {
+            return -1;
+        } else {
+            return count;
+        }
+    }
+    let arrayChar = prompt("Input the character: ");
+    let array = [];
+    for (let i = 0; i < arrayChar.length; i++) {
+        array.push(arrayChar[i]);
+    }
+    let check = prompt();
+    let result = checkCharacter(array, check);
+    alert(result);
+</script>
+
+</body>
+</html>

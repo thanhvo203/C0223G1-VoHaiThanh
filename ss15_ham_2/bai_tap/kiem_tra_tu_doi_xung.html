@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function symmetricalWord(string){
+        for(let i = 0 ; i < string.length/2 ; i++){
+            if(string[i] != string[string.length-i-1]){
+                return "String not symmetrical";
+            }
+        }
+        return "String symmetrical";
+    }
+    let word = prompt();
+    alert(symmetricalWord(word));
+</script>
+
+</body>
+</html>
