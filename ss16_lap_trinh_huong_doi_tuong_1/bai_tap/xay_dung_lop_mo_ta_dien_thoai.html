@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function moblie(name, battery, message) {
+        this.battery = battery;
+        this.name = name;
+        this.message = message;
+
+        this.getName = function () {
+            return this.name;
+        };
+        this.setName = function (name) {
+            this.name = name;
+        };
+        this.getBattery = function () {
+            alert(name + "'battery is: " + battery);
+        };
+        this.charging = function () {
+            if (battery === 100) {
+                alert("Your battery of phone was full. ");
+            } else {
+                alert("Your " + name + " is charging: " + ++battery);
+            }
+        };
+        this.useTheApp = function () {
+            alert("Your battery after use app : " + --battery);
+        };
+        this.writeMessage = function () {
+            this.message = (prompt("Input the message: "));
+        };
+        this.saveMessage = function (){
+            return "You got a message is saving :"+ this.message;
+        };
+        this.getMessage = function (){
+            if (name === "Nokia") {
+                alert("Your got a message from IPhone.");
+            } else {
+                alert("Your got a message  from Nokia.");
+            }
+        };
+        this.sentMessage = function () {
+            if (name === "Nokia") {
+                alert("Your message: "+this.message +" sent to IPhone.");
+            } else {
+                alert("Your message: "+this.message +"sent to Nokia.");
+            }
+        };
+        this.seenMessage = function (){
+            if (name === "Nokia") {
+                alert("The message was send : " + this.message);
+            } else {
+                alert("The message was send:  " + this.message);
+            }
+        };
+    };
+        function turnOn() {
+            alert("Your phone is turning on.");
+        };
+
+        function turnOff() {
+            alert("Your phone is turning off.");
+        };
+
+        function charging() {
+            if (input === "Nokia") {
+                nokia.charging()
+            } else {
+                iphone.charging();
+            }
+        };
+
+        function use() {
+            if (input === "Nokia") {
+                nokia.useTheApp();
+            } else {
+                iphone.useTheApp();
+            }
+        };
+
+        function battery() {
+            if (input === "Nokia") {
+                nokia.getBattery();
+            } else {
+                iphone.getBattery();
+            }
+        };
+
+        function typing() {
+            if (input === "Nokia") {
+                nokia.writeMessage();
+            } else {
+                iphone.writeMessage();
+            }
+        };
+
+        function sendMessage() {
+            if (input === "Nokia") {
+                nokia.sentMessage();
+            } else {
+                iphone.sentMessage();
+            }
+        };
+        function getting(){
+            if (input === "Nokia") {
+                nokia.getMessage();
+            } else {
+                iphone.getMessage();
+            }
+        };
+        function saving(){
+            if (input === "Nokia") {
+               alert(nokia.saveMessage());
+            } else {
+                alert(iphone.saveMessage());
+            }
+        };
+        function seen(){
+            if (input === "Nokia") {
+                nokia.seenMessage()
+            } else {
+                iphone.seenMessage();
+            }
+        };
+    let input = prompt();
+    let nokia = new moblie("Nokia", 90);
+    let iphone = new moblie("Iphone", 100);
+</script>
+<button type="button" onclick="typing() ">Write Message</button>
+<button type="button" onclick="sendMessage()">Send Message</button>
+<button type="button" onclick="getting()">Get Message</button>
+<button type="button" onclick="saving()">Save Message</button>
+<button type="button" onclick="seen()">Seen Message</button>
+<button type="button" onclick="turnOn()">Turn On</button>
+<button type="button" onclick="turnOff()">Turn Off</button>
+<button type="button" onclick="charging()">Charging</button>
+<button type="button" onclick="use()">Use</button>
+<button type="button" onclick="battery()">Battery</button>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="rectangle" width="500px" height="200px" style="border: 1px solid white"></canvas>
+<p id="area"></p>
+<p id="parameter"></p>
+
+</body>
+<script>
+    function rectangle(width,height){
+        this.width = width;
+        this.height = height;
+        this.getWidth = function (){
+            return this.width;
+        };
+        this.setWidth = function (width){
+            this.width = width;
+        };
+        this.getHeight = function (){
+            return this.height;
+        };
+        this.setHeight = function (height){
+            this.height = height;
+        };
+        this.getArea = function (){
+            return width * height;
+        };
+        this.getParameter = function (){
+            return (width + height) *2;
+        };
+    };
+    function creatRectangle(){
+        let creat = document.getElementById("rectangle");
+        let context = creat.getContext("2d");
+        let calculator = new rectangle(20,30);
+        context.fillStyle = "#FF0000";
+        context.fillRect(0,0,300,100);
+        document.getElementById("area").innerHTML = "Area of rectangle: "+ calculator.getArea();
+        document.getElementById("parameter").innerHTML ="Parameter of rectangle : "+ calculator.getParameter();
+    };
+    creatRectangle();
+
+</script>
+</html>
