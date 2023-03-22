@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rat {
+        constructor(name, weight, speed, status, sound) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.status = status;
+            this.sound = sound;
+            this.ratStatus = function (status) {
+                if (rat.status) {
+                    document.write("Alive");
+                } else {
+                    document.write("Dead");
+                }
+            };
+        };
+    };
+
+    class Cat {
+        constructor(name, weight, speed, sound) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.sound = sound;
+        };
+    };
+
+    function catCatchRat() {
+        if (cat.speed > rat.speed) {
+             return alert("Cat was catch the rat.");
+        } else {
+             return alert("Cat isn't catch the rat.");
+        }
+    };
+    function eatRat() {
+        if (rat.status) {
+            alert("Rat be eat.");
+        }
+    };
+    function weightCat() {
+        if (rat.status == true) {
+            return cat.weight += rat.weight;
+            rat.status = false;
+        }
+    };
+    let rat = new Rat("Jerry", 50, 100, true, "Squeak Squeak");
+    let cat = new Cat("Tom", 55, 120, "Meow Meow",);
+    alert("Rat: " + rat.name + " weight: " + rat.weight + " speed: " + rat.speed + " sound: " + rat.sound);
+    alert("Cat: " + cat.name + " weight: " + cat.weight + " speed: " + cat.speed + " sound: " + cat.sound);
+    alert("Cat is chasing the rat. ");
+    catCatchRat();
+    alert("Cat is eating the rat. ");
+    eatRat();
+    alert("Weight of cat after eat the rat: " + weightCat());
+</script>
+</body>
+</html>
