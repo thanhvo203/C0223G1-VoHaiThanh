@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let drinkName = ["Coffee", "Orange Juice", "Carrot Juice", "Tomato Juice", "Water", "Coconut Juice", "Out"];
+    let numberDrink = [1, 2, 3, 4, 5, 6, 7];
+    do {
+        for (let i = 0; i < numberDrink.length; i++) {
+            for (let j = i; j < drinkName.length; j++) {
+                document.write(numberDrink[i] + ". " + drinkName[i] + "<br>");
+                break;
+            }
+        }
+        let chooseDrink = prompt("Please enter the number you wanna drink.") * 1;
+        for (let i = 0; i < numberDrink.length; i++) {
+            if (chooseDrink === numberDrink[i] && numberDrink[i] !== 7) {
+                let priceDrink = prompt("Price of the " + drinkName[i] + " is : ");
+                let quality = prompt("How many " + drinkName[i] + " wanna drink??") * 1;
+                let total;
+                total = priceDrink * quality;
+                alert("Total of money you have to pay is: " + total);
+            }
+            if (numberDrink[i] === 7) {
+                alert("Nice to meet you. I hope to see you in the next time. Have a good day.");
+            }
+        }
+    }while (numberDrink.length === 7)
+</script>
+
+</body>
+</html>

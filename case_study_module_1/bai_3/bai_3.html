@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayA = [5,2,5,2,3];
+    let arrayB = [6,3,4,1];
+    let arrayC = []
+    let temp;
+    for(let i =0; i< arrayA.length ; i++) {
+        for (let j = i; j < arrayB.length; j++) {
+            arrayC.push(arrayA[i] / arrayB[j]);
+            break;
+        }
+    }
+    for( let i  =0; i< arrayC.length ;i++){
+        let max = arrayC[0];
+        if(max < arrayC[i]){
+            max = arrayC[i];
+            temp = i;
+        }
+
+    }
+    alert(temp);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayA = [1,3,2,3,2,3];
+    let arrayB = [1,2,3,2,1,2,3,3];
+    let arrayC= [];
+    for(let i = 0 ; i < arrayA.length ;i++){
+        for(let j = i ; j < arrayB.length ; j++){
+            if( arrayA[i] === arrayB[j]){
+                break;
+            }else{
+                arrayC.push(arrayB[j]);
+                break;
+            }
+        }
+    }
+    let arrayD = [];
+    for(let i =0; i< arrayC.length ; i++){
+        if(i == arrayC.indexOf(arrayC[i])){
+            arrayD.push(arrayC[i]);
+        }
+    }
+    document.write(arrayD);
+</script>
+
+</body>
+</html>
