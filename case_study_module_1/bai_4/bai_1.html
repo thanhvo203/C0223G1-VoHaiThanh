@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let nameString = "tRuong  TaN Hai";
+    let string = "";
+    let string2 = "";
+    console.log(nameString);
+    for(let i = 0 ; i < nameString.length; i++){
+        if(nameString[i] === " " && nameString[i-1] === " ") {
+            string2 += nameString[i];
+        }else{
+            string+= nameString[i];
+        }
+    }
+    console.log(string);
+    let change = string.toLowerCase();
+    console.log(change);
+    let upperLowerCase = "";
+    for(let i  = 0 ; i < change.length; i++){
+        if(i === 0 || (change.charCodeAt(i) >= 95 && change.charCodeAt(i) <= 122
+         && change.charCodeAt(i-1) === 32)){
+            upperLowerCase += change[i].toUpperCase();
+        }else{
+            upperLowerCase +=change[i];
+        }
+    }
+    console.log(upperLowerCase);
+
+
+
+</script>
+
+</html>

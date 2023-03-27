@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let string1 = "aabcc";
+    let string2 = "adcaa";
+    let count = 0;
+    let string3 = Array.from(string1);
+    let string4 = Array.from(string2);
+    for (let i = 0; i < string3.length; i++) {
+        for (let j = 0; j < string4.length; j++) {
+            if (string3[i] === string4[j]) {
+                string4[j] = string4[j + 1];
+                count++;
+                break;
+            }
+        }
+        document.write(string4 + "<br>");
+    }
+    document.write(count);
+
+</script>
+
+</body>
+</html>

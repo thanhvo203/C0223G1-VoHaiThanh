@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="newAdd()">Thêm mới học viên</button>
+<button type="button" onclick="edit()">Sửa thông tin học viên</button>
+<button type="button" onclick="deleteStudent()">Xoá học viên</button>
+<p id="table"></p>
+</body>
+<script>
+    let name = ["Nguyễn Văn A", "Nguyễn Văn B" ,"Nguyễn Văn C"];
+    let number = ["HV-0001","HV-0002","HV-0003"];
+    let className  = ["C0122G1","C0222G1","C0232G1"];
+    let email = ["nguyenvana@gmail.com","nguyenvanb@gmail.com","nguyenvanc@gmail.com"];
+    let date = ["01/01/2001","01/02/2002","01/03/2003"];
+    let module = [1,2,3];
+    function creatTable(){
+        let tableStudent = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>Mã học viên</th>\n' +
+            '        <th>Tên</th>\n' +
+            '        <th>Lớp</th>\n' +
+            '        <th>Email</th>\n' +
+            '        <th>Ngày sinh</th>\n' +
+            '        <th>Module</th>\n' +
+            '    </tr>'
+        for(let i = 0 ; i < name.length ; i++){
+            tableStudent += '<tr>\n' +
+                '        <td>'+ number[i] +'</td>\n' +
+                '        <td>' + name[i] + '</td>\n' +
+                '        <td>'+ className[i]+'</td>\n' +
+                '        <td>'+ email[i]+'</td>\n' +
+                '        <td>'+ date[i]+'</td>\n' +
+                '        <td>'+ module[i]+'</td>\n' +
+                '    </tr>'
+        }
+        tableStudent+= '</table>';
+        document.getElementById("table").innerHTML = tableStudent;
+    }
+    creatTable();
+    function addModule(){
+        let addModule = prompt("Nhập vào module: ")*1;
+        if(addModule <=6 && addModule  >=1 ){
+            module.push(addModule);
+        }else{
+            alert("Mã module sai.");
+        }
+    }
+    function addName(maxChar){
+        let addName = prompt("Nhập vào tên: ");
+        if( )
+    }
+    function newAdd(){
+        let addNumber = prompt("Nhập vào mã học viên");
+        let addName = prompt("Nhập vào tên: ");
+        let addClass = prompt("Nhập vào lớp: ");
+        let addEmail = prompt("Nhập vào email: ");
+        let addDate = prompt("Nhập vào ngày sinh:  ");
+        number.push(addNumber);
+        name.push(addName);
+        className.push(addClass);
+        email.push(addEmail);
+        date.push(addDate);
+        addModule();
+        creatTable();
+    }
+    function edit(){
+        let changeName = prompt("Nhập vào mã học viên: ");
+        let count = 0;
+        for(let i = 0 ; i < number.length; i++){
+            if(changeName === number[i]) {
+                let addNumber = prompt("Nhập vào mã học viên");
+                let addName = prompt("Nhập vào tên: ");
+                let addClass = prompt("Nhập vào lớp: ");
+                let addEmail = prompt("Nhập vào email: ");
+                let addDate = prompt("Nhập vào ngày sinh:  ");
+                let addModule = prompt("Nhập vào module: ");
+                number[i] = addNumber;
+                name[i] = addName;
+                className[i] = addClass;
+                email[i] = addEmail;
+                date[i] = addDate;
+                module[i] = addModule;
+                count++;
+                creatTable();
+                }
+        }if(count === 0){
+            alert("Mã học viên không tồn tại.");
+        }
+    }
+    function deleteStudent(){
+        let deleteStudent = prompt("Nhập vào mã học viên cần xoá: ");
+        let count = 0;
+        for (let i = 0; i < number.length; i++) {
+            if(deleteStudent === number[i]) {
+                let check = confirm("Bạn có muốn xoá học viên này không? ");
+                if (check) {
+                    name.splice(i,1);
+                    number.splice(i,1);
+                    className.splice(i,1);
+                    email.splice(i,1);
+                    date.splice(i,1);
+                    module.splice(i,1);
+                    count++;
+                    creatTable();
+                    break;
+                 }else{
+                    break;
+                }
+            }
+        }if(count == 0){
+            alert("Mã học viên không tồn tại.");
+        }
+    }
+</script>
+</html>

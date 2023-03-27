@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s = prompt("Enter the string");
+    let d = [];
+    let count =0;
+    for(let i  =0 ; i < s.length ; i++){
+        if(i == s.indexOf(s[i])){
+            d.push(s[i]);
+            count++;
+        }
+    }
+    document.write(count + "<br>");
+    document.write(d);
+</script>
+
+</body>
+</html>
