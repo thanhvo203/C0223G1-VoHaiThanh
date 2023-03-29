@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function stringWord(string) {
+        let count = 0;
+        let string1 = "";
+        for (let i = 0; i < string.length; i++) {
+            if ((string.charCodeAt(i) >= 65 && string.charCodeAt(i) <= 90
+                    || string.charCodeAt(i) >= 97 && string.charCodeAt(i) <= 122)
+                && string.charCodeAt(i - 1) === 32) {
+                count++;
+            }
+        }
+        console.log(count);
+        if (count == 0) {
+            string1 += string;
+        } else {
+        string1 +=string[0].toUpperCase();
+            for (let i = 0; i < string.length; i++) {
+                if ((string.charCodeAt(i) >= 65 && string.charCodeAt(i) <= 90
+                    || string.charCodeAt(i) >= 97 && string.charCodeAt(i) <= 122)
+                    && string.charCodeAt(i - 1) === 32) {
+                    string1 += string[i].toUpperCase();
+                }
+            }
+
+        }
+
+        return console.log(string1);
+    }
+
+    let n = prompt("Nhập vào chuỗi");
+    stringWord(n);
+</script>
+
+</body>
+</html>

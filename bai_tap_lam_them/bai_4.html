@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="id" placeholder="Enter id">
+<input type="text" id="name" placeholder="Enter name">
+<input type="text" id="manufacture" placeholder="Enter manufacture">
+<input type="text" id="price" placeholder="Enter price">
+<button type="button" onclick="addCompute()">ADD</button>
+<p id="output"></p>
+<script>
+    class Computer{
+        constructor(id,name,manufacturing, price) {
+            this.id = id;
+            this.name = name;
+            this.manufacturing = manufacturing;
+            this.price = price;
+        }
+        setID(id){
+            this.id = id;
+        }
+        getID(){
+            return this.id;
+        }
+        setName(name){
+            this.name = name;
+        }
+        getName(){
+            return this.name;
+        }
+        setManufacturing(manufacturing){
+            this.manufacturing = manufacturing;
+        }
+        getManufacturing(){
+            return this.manufacturing;
+        }
+        setPrice(price){
+            this.price = price;
+        }
+        getPrice(){
+            return this.price;
+        }
+    }
+    let computer1 = new Computer(1,"Asus","A",1000);
+    let computer2 = new Computer(2,"HP","B",1200);
+    let computer3 = new Computer(3,"DELL","C",1300);
+    let arrayComputer = [computer1,computer2,computer3];
+    function display(){
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>ID</th>\n' +
+            '        <th>Name</th>\n' +
+            '        <th>Manufacturing Company</th>\n' +
+            '        <th>Price</th>\n' +
+            '    </tr>'
+        for (let i = 0; i < arrayComputer.length; i++) {
+            tableString += '<tr>' +
+                '        <td>'+arrayComputer[i].getID()+'</td>\n' +
+                '        <td>'+arrayComputer[i].getName()+'</td>\n' +
+                '        <td>'+arrayComputer[i].getManufacturing()+'</td>\n' +
+                '        <td>'+arrayComputer[i].getPrice()+'</td>\n' +
+                '        <td><button type="button" onclick="delete1('+i+')">Delete</button> </td>\n' +
+                '    </tr>'
+        }
+        tableString += '<table>';
+        document.getElementById("output").innerHTML = tableString;
+    }
+    display();
+    function delete1(i){
+        let check = confirm("Do you wanna delete this computer?");
+        if(check){
+            arrayComputer.splice(i,1);
+        }
+        display();
+    }
+    function addCompute(){
+        let id = document.getElementById("id").value;
+        let name = document.getElementById("name").value;
+        let manufacture = document.getElementById("manufacture").value;
+        let price = document.getElementById("price").value;
+        let computer4 = new Computer(id,name,manufacture,price);
+        arrayComputer.push(computer4);
+        display();
+
+    }
+</script>
+
+</body>
+</html>
